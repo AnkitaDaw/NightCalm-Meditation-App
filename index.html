@@ -21,6 +21,7 @@
     <!-- ============= SCREEN 1: NIGHT SHIFT INTRO (Image 4) ============= -->
     <div class="screen active" id="screen-onboard1">
       <div class="content-pad d-flex flex-column flex-grow-1">
+        <button type="button" class="skip-btn" onclick="showScreen('screen-onboard3')" aria-label="Skip onboarding">Skip</button>
         <div class="logo-box">
           <button type="button" class="bot-hero" onclick="showScreen('screen-onboard2')" aria-label="Continue onboarding">
             <img src="images/logo.png" alt="Night Calm" class="logo w-auto my-4" style="max-width: 100px;" />
@@ -32,7 +33,9 @@
           relax and sleep better.</p>
         <div class="d-flex align-items-center justify-content-between pt-3 mt-auto">
           <div class="dots">
-            <span class="dot on"></span><span class="dot"></span><span class="dot"></span>
+            <button type="button" class="dot-btn" onclick="showScreen('screen-onboard1')" aria-label="Go to first screen"><span class="dot on"></span></button>
+            <button type="button" class="dot-btn" onclick="showScreen('screen-onboard2')" aria-label="Go to second screen"><span class="dot"></span></button>
+            <button type="button" class="dot-btn" onclick="showScreen('screen-onboard3')" aria-label="Go to third screen"><span class="dot"></span></button>
           </div>
           <button type="button" class="arrow-fab" onclick="showScreen('screen-onboard2')" aria-label="Next"><i
               class="bi bi-arrow-right"></i></button>
@@ -42,7 +45,8 @@
 
     <!-- ============= SCREEN 2: NIGHT ROUTINE (Image 3) ============= -->
     <div class="screen" id="screen-onboard2">
-      <div class="content-pad d-flex flex-column flex-grow-1" style="padding-top:64px;">
+      <div class="content-pad d-flex flex-column flex-grow-1">
+        <button type="button" class="skip-btn" onclick="showScreen('screen-onboard3')" aria-label="Skip onboarding">Skip</button>
         <h2 class="fw-bold mb-2" style="font-size:1.9rem;">Made for your<br><span
             style="color:var(--purple-light);">night routine</span></h2>
         <p class="text-secondary mb-4" style="color:var(--muted)!important;">Short, effective sessions to help you
@@ -77,7 +81,9 @@
 
         <div class="d-flex align-items-center justify-content-between pt-3 mt-auto">
           <div class="dots">
-            <span class="dot"></span><span class="dot on"></span><span class="dot"></span>
+            <button type="button" class="dot-btn" onclick="showScreen('screen-onboard1')" aria-label="Go to first screen"><span class="dot"></span></button>
+            <button type="button" class="dot-btn" onclick="showScreen('screen-onboard2')" aria-label="Go to second screen"><span class="dot on"></span></button>
+            <button type="button" class="dot-btn" onclick="showScreen('screen-onboard3')" aria-label="Go to third screen"><span class="dot"></span></button>
           </div>
           <button type="button" class="arrow-fab" onclick="showScreen('screen-onboard3')" aria-label="Next"><i
               class="bi bi-arrow-right"></i></button>
@@ -96,7 +102,9 @@
         <div class="flex-grow-1"></div>
 
         <div class="dots pt-2 pb-3">
-          <span class="dot"></span><span class="dot"></span><span class="dot on"></span>
+          <button type="button" class="dot-btn" onclick="showScreen('screen-onboard1')" aria-label="Go to first screen"><span class="dot"></span></button>
+          <button type="button" class="dot-btn" onclick="showScreen('screen-onboard2')" aria-label="Go to second screen"><span class="dot"></span></button>
+          <button type="button" class="dot-btn" onclick="showScreen('screen-onboard3')" aria-label="Go to third screen"><span class="dot on"></span></button>
         </div>
         <button type="button" class="btn btn-purple w-100" onclick="showScreen('screen-register')">Get Started</button>
         <p class="text-center mt-3 mb-0" style="color:var(--muted); font-size:.9rem;">Already have an account? <a
