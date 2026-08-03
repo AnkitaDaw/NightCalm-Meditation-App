@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Calm — Onboarding</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="page-onboarding">
+
+  <div class="phone">
+
+    <!-- ============= SCREEN 1: NIGHT SHIFT INTRO (Image 4) ============= -->
+    <div class="screen active" id="screen-onboard1">
+      <div class="content-pad d-flex flex-column flex-grow-1">
+        <div class="logo-box">
+          <button type="button" class="bot-hero" onclick="showScreen('screen-onboard2')" aria-label="Continue onboarding">
+            <img src="images/logo.png" alt="Night Calm" class="logo w-auto my-4" style="max-width: 100px;" />
+          </button>
+        </div>
+        <h2 class="fw-bold mb-2" style="font-size:1.9rem;">Find calm after the<br><span
+            style="color:var(--purple-light);">night shift</span></h2>
+        <p class="text-secondary" style="color:var(--muted)!important;">Guided meditations designed to help you unwind,
+          relax and sleep better.</p>
+        <div class="d-flex align-items-center justify-content-between pt-3 mt-auto">
+          <div class="dots">
+            <span class="dot on"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <button type="button" class="arrow-fab" onclick="showScreen('screen-onboard2')" aria-label="Next"><i
+              class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============= SCREEN 2: NIGHT ROUTINE (Image 3) ============= -->
+    <div class="screen" id="screen-onboard2">
+      <div class="content-pad d-flex flex-column flex-grow-1" style="padding-top:64px;">
+        <h2 class="fw-bold mb-2" style="font-size:1.9rem;">Made for your<br><span
+            style="color:var(--purple-light);">night routine</span></h2>
+        <p class="text-secondary mb-4" style="color:var(--muted)!important;">Short, effective sessions to help you
+          de-stress, reset and recharge.</p>
+
+        <div class="d-flex flex-column gap-3">
+          <div class="feature-row">
+            <div class="feature-icon" style="background:rgba(139,92,246,.18); color:#c3b1ff;"><i
+                class="bi bi-moon-stars-fill"></i></div>
+            <div>
+              <div class="fw-semibold">Wind Down</div>
+              <div style="color:var(--muted); font-size:.85rem;">Release stress and calm your mind.</div>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon" style="background:rgba(96,165,250,.18); color:#9dc4ff;"><i
+                class="bi bi-cloud-fill"></i></div>
+            <div>
+              <div class="fw-semibold">Sleep Better</div>
+              <div style="color:var(--muted); font-size:.85rem;">Drift off faster and enjoy deeper rest.</div>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-icon" style="background:rgba(251,191,36,.18); color:#ffd27a;"><i
+                class="bi bi-sun-fill"></i></div>
+            <div>
+              <div class="fw-semibold">Wake Refreshed</div>
+              <div style="color:var(--muted); font-size:.85rem;">Start your day with clarity and calm.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between pt-3 mt-auto">
+          <div class="dots">
+            <span class="dot"></span><span class="dot on"></span><span class="dot"></span>
+          </div>
+          <button type="button" class="arrow-fab" onclick="showScreen('screen-onboard3')" aria-label="Next"><i
+              class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============= SCREEN 3: GET STARTED (Image 2) ============= -->
+    <div class="screen" id="screen-onboard3">
+      <div class="content-pad d-flex flex-column flex-grow-1" style="padding-top:56px;">
+        <h2 class="fw-bold mb-2" style="font-size:1.75rem;">You take care<br>of others.<br><span
+            style="color:var(--purple-light);">We take care<br>of you.</span> <i class="bi bi-heart"
+            style="color:var(--purple-light); font-size:1.2rem;"></i></h2>
+        <p class="text-secondary mb-3" style="color:var(--muted)!important;">A peaceful pause, whenever you need it.</p>
+
+        <div class="flex-grow-1"></div>
+
+        <div class="dots pt-2 pb-3">
+          <span class="dot"></span><span class="dot"></span><span class="dot on"></span>
+        </div>
+        <button type="button" class="btn btn-purple w-100" onclick="showScreen('screen-register')">Get Started</button>
+        <p class="text-center mt-3 mb-0" style="color:var(--muted); font-size:.9rem;">Already have an account? <a
+            href="#" class="link-purple" onclick="showScreen('screen-login'); return false;">Log in</a></p>
+      </div>
+    </div>
+
+    <!-- ============= SCREEN 4: REGISTER (Image 1) ============= -->
+    <div class="screen" id="screen-register">
+      <div class="content-pad d-flex flex-column flex-grow-1">
+        <button class="back-btn mb-4" onclick="showScreen('screen-onboard3')" aria-label="Back"><i
+            class="bi bi-chevron-left"></i></button>
+
+        <h2 class="fw-bold mb-2"><span style="color:var(--purple-light);">Create</span> your account <i
+            class="bi bi-moon-stars-fill" style="color:var(--moon); font-size:1.2rem;"></i></h2>
+        <p class="text-secondary mb-4" style="color:var(--muted)!important;">Join Night Calm and start your journey to
+          better rest.</p>
+
+        <form id="registerForm" novalidate>
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <div class="input-icon-wrap">
+              <i class="bi bi-person icon-left"></i>
+              <input type="text" class="form-control form-control-dark" placeholder="Enter your full name" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <div class="input-icon-wrap">
+              <i class="bi bi-envelope icon-left"></i>
+              <input type="email" class="form-control form-control-dark" placeholder="Enter your email" required>
+            </div>
+          </div>
+          <div class="mb-1">
+            <label class="form-label">Password</label>
+            <div class="input-icon-wrap">
+              <i class="bi bi-lock icon-left"></i>
+              <input type="password" id="regPass" class="form-control form-control-dark" placeholder="Create a password"
+                minlength="8" required>
+              <button type="button" class="icon-toggle" onclick="togglePw('regPass', this)"><i
+                  class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="mb-3"><small style="color:var(--purple-light);">At least 8 characters</small></div>
+
+          <div class="mb-4">
+            <label class="form-label">Confirm Password</label>
+            <div class="input-icon-wrap">
+              <i class="bi bi-lock icon-left"></i>
+              <input type="password" id="regPass2" class="form-control form-control-dark"
+                placeholder="Confirm your password" required>
+              <button type="button" class="icon-toggle" onclick="togglePw('regPass2', this)"><i
+                  class="bi bi-eye"></i></button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-purple w-100">Register</button>
+        </form>
+
+        <div class="divider-text">or continue with</div>
+        <div class="d-flex gap-3">
+          <button class="btn btn-social flex-grow-1 d-flex align-items-center justify-content-center gap-2"><i
+              class="bi bi-google"></i> Google</button>
+          <button class="btn btn-social flex-grow-1 d-flex align-items-center justify-content-center gap-2"><i
+              class="bi bi-apple"></i> Apple</button>
+        </div>
+
+        <p class="text-center mt-4 mb-0" style="color:var(--muted); font-size:.9rem;">Already have an account? <a
+            href="#" class="link-purple" onclick="showScreen('screen-login'); return false;">Log in</a></p>
+      </div>
+    </div>
+
+    <!-- ============= SCREEN 5: LOGIN (Image 5) ============= -->
+    <div class="screen" id="screen-login">
+      <div class="login_imgbox position-relative">
+        <img src="images/login_bg.png" alt="Night Calm" class="login_bg w-100 h-100 object-fit-cover" />
+      </div>
+
+      <div class="content-pad d-flex flex-column flex-grow-1 position-relative" style="padding-top:20px;">
+        
+        <h2 class="fw-bold mb-2">Welcome back <i class="bi bi-moon-stars-fill"
+            style="color:var(--moon); font-size:1.05rem;"></i></h2>
+        <p class="mb-4" style="color:var(--purple-light); font-weight:500;">Take a deep breath.<br>You've got this.</p>
+
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <div class="input-icon-wrap">
+              <i class="bi bi-envelope icon-left"></i>
+              <input type="email" class="form-control form-control-dark" placeholder="Enter your email" required>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Password</label>
+            <div class="input-icon-wrap">
+              <i class="bi bi-lock icon-left"></i>
+              <input type="password" id="loginPass" class="form-control form-control-dark"
+                placeholder="Enter your password" required>
+              <button type="button" class="icon-toggle" onclick="togglePw('loginPass', this)"><i
+                  class="bi bi-eye"></i></button>
+            </div>
+          </div>
+          <div class="text-end mb-4"><a href="#" class="link-purple" style="font-size:.85rem;">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-purple w-100">Log In</button>
+        </form>
+
+        <div class="divider-text">or continue with</div>
+        <div class="d-flex gap-3">
+          <button class="btn btn-social flex-grow-1 d-flex align-items-center justify-content-center gap-2"><i
+              class="bi bi-google"></i> Google</button>
+          <button class="btn btn-social flex-grow-1 d-flex align-items-center justify-content-center gap-2"><i
+              class="bi bi-apple"></i> Apple</button>
+        </div>
+
+        <p class="text-center mt-4 mb-0" style="color:var(--muted); font-size:.9rem;">Don't have an account? <a href="#"
+            class="link-purple" onclick="showScreen('screen-register'); return false;">Register</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/onboarding.js"></script>
+</body>
+
+</html>
