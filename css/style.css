@@ -134,7 +134,6 @@ body.page-onboarding {
   font-weight: 500;
   padding: 0;
   cursor: pointer;
-  text-decoration: underline;
   text-underline-offset: 2px;
 }
 
@@ -254,8 +253,8 @@ body.page-onboarding {
 }
 
 .arrow-fab {
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background: var(--purple-grad);
   border: none;
