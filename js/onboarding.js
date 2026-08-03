@@ -51,6 +51,13 @@
   }
 
   window.addEventListener('DOMContentLoaded', () => {
+    const splashScreen = document.getElementById('splash-screen');
+    if (splashScreen) {
+      setTimeout(() => {
+        splashScreen.classList.add('fade-out');
+      }, 1000);
+    }
+
     if(!document.querySelector('.screen.active')){
       const firstScreen = document.getElementById('screen-onboard1');
       if(firstScreen) firstScreen.classList.add('active');

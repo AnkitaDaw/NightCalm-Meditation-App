@@ -59,6 +59,36 @@ body.page-onboarding {
   align-items: center;
   justify-content: center;
   padding: 24px 0;
+  overflow: hidden;
+}
+
+.splash-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #0d1128 0%, #0a0d1f 100%);
+  z-index: 20;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  border-radius: 20px;
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-logo {
+  width: 140px;
+  max-width: 60vw;
+  animation: splash-pop 0.8s ease-out;
+}
+
+@keyframes splash-pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 .phone {
