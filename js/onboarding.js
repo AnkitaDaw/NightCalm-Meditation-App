@@ -10,6 +10,14 @@
     window.scrollTo(0,0);
   }
 
+  function setAuthState(isLoggedIn){
+    localStorage.setItem('night-calm-auth', isLoggedIn ? 'logged-in' : 'guest');
+  }
+
+  function getAuthState(){
+    return localStorage.getItem('night-calm-auth') || 'guest';
+  }
+
   function togglePw(inputId, btn){
     const input = document.getElementById(inputId);
     if(!input) return;
@@ -60,6 +68,7 @@
         const p1 = document.getElementById('regPass').value;
         const p2 = document.getElementById('regPass2').value;
         if(p1 !== p2){ alert("Passwords don't match."); return; }
+        setAuthState(true);
         window.location.href = 'home.html';
       });
     }
@@ -69,6 +78,7 @@
       loginForm.addEventListener('submit', function(e){
         e.preventDefault();
         if(this.checkValidity() === false){ e.stopPropagation(); this.classList.add('was-validated'); return; }
+        setAuthState(true);
         window.location.href = 'home.html';
       });
     }
